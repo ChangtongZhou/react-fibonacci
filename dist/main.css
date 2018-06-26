@@ -1,4 +1,287 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900i);
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  /* overflow: auto; */
+
+}
+
 body {
-    line-height: 2;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(152deg, #48bbdd, #6da2ec, #926dec);
+    background-size: 1000% 1000%;
+
+    /* font-family: 'Playfair Display', serif; */
+    font-family: serif;
+    color: rgb(82, 80, 66);
+    /* color: rgb(255,0,0, 1); */
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 25px;
+    /* overflow: hidden; */
+
+    -webkit-animation: backgrnd_animation 35s ease infinite;
+    -moz-animation: backgrnd_animation 35s ease infinite;
+    animation: backgrnd_animation 35s ease infinite;
+}
+
+@-webkit-keyframes backgrnd_animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes backgrnd_animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes backgrnd_animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+nav {
+  opacity: 0.5;
+}
+
+#input-form {
+  padding-top: 5%
+}
+
+.form-control {
+  width: 35%;
+  margin: 0 auto;
+  background-color: #c4d2ec;
+}
+
+button {
+  margin-top: 5%;
+  margin-bottom: 5%
+}
+
+#collapseCard {
+  margin-bottom: 5%;
+}
+
+#result {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+#result-card {
+  width: 55%;
+  margin: 0 auto;
+  background-color: #c4d2ec;
+  font-size: 18px;
+}
+
+.btn-large {
+  background-color:  #ef6c00;
+}
+
+.btn-large:hover {
+  background-color:  #ef6c00;
+}
+
+.alert {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+
+
+/* Backgound animation */
+/* .wrap {
+  perspective-origin: 50% 50%;
+} */
+.container {
+
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+.container h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 3vw;
+  font-weight: 900;
+  font-style: italic;
+  color: #efedf9;
+  text-align: center;
+}
+
+.container h5 {
+  font-weight: bold;
+  padding-top: 5%;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* height: 1000%; */
+  margin: 0 auto;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.svg {
+  /* stroke: #7ceaa4; */
+  stroke: #A3E4D7;
+  position: absolute;
+  bottom: -100vh;
+  transform-style: preserve-3d;
+}
+.svg:nth-child(1) {
+  left: 73%;
+  animation: raise1 10s linear infinite;
+  animation-delay: -1s;
+  transform: scale(-0.3) rotate(11deg);
+  z-index: -6;
+  filter: blur(-5px);
+}
+@keyframes raise1 {
+  to {
+    bottom: 150vh;
+    transform: scale(-0.3) rotate(232deg);
+  }
+}
+.svg:nth-child(2) {
+  left: 53%;
+  animation: raise2 16s linear infinite;
+  animation-delay: 0s;
+  transform: scale(0) rotate(292deg);
+  z-index: -5;
+  filter: blur(-4px);
+}
+@keyframes raise2 {
+  to {
+    bottom: 150vh;
+    transform: scale(0) rotate(153deg);
+  }
+}
+.svg:nth-child(3) {
+  left: 38%;
+  animation: raise3 13s linear infinite;
+  animation-delay: -2s;
+  transform: scale(0.3) rotate(336deg);
+  z-index: -4;
+  filter: blur(-3px);
+}
+@keyframes raise3 {
+  to {
+    bottom: 150vh;
+    transform: scale(0.3) rotate(187deg);
+  }
+}
+.svg:nth-child(4) {
+  left: 97%;
+  animation: raise4 13s linear infinite;
+  animation-delay: -2s;
+  transform: scale(0.6) rotate(333deg);
+  z-index: -3;
+  filter: blur(-2px);
+}
+@keyframes raise4 {
+  to {
+    bottom: 150vh;
+    transform: scale(0.6) rotate(281deg);
+  }
+}
+.svg:nth-child(5) {
+  left: 58%;
+  animation: raise5 7s linear infinite;
+  animation-delay: -3s;
+  transform: scale(0.9) rotate(302deg);
+  z-index: -2;
+  filter: blur(-1px);
+}
+@keyframes raise5 {
+  to {
+    bottom: 150vh;
+    transform: scale(0.9) rotate(190deg);
+  }
+}
+.svg:nth-child(6) {
+  left: 19%;
+  animation: raise6 15s linear infinite;
+  animation-delay: -1s;
+  transform: scale(1.2) rotate(67deg);
+  z-index: -1;
+  filter: blur(0px);
+}
+@keyframes raise6 {
+  to {
+    bottom: 150vh;
+    transform: scale(1.2) rotate(97deg);
+  }
+}
+.svg:nth-child(7) {
+  left: 68%;
+  animation: raise7 18s linear infinite;
+  animation-delay: -3s;
+  transform: scale(1.5) rotate(24deg);
+  z-index: 0;
+  filter: blur(1px);
+}
+@keyframes raise7 {
+  to {
+    bottom: 150vh;
+    transform: scale(1.5) rotate(225deg);
+  }
+}
+.svg:nth-child(8) {
+  left: 85%;
+  animation: raise8 16s linear infinite;
+  animation-delay: -3s;
+  transform: scale(1.8) rotate(156deg);
+  z-index: 1;
+  filter: blur(2px);
+}
+@keyframes raise8 {
+  to {
+    bottom: 150vh;
+    transform: scale(1.8) rotate(353deg);
+  }
+}
+.svg:nth-child(9) {
+  left: 6%;
+  animation: raise9 14s linear infinite;
+  animation-delay: -2s;
+  transform: scale(2.1) rotate(248deg);
+  z-index: 2;
+  filter: blur(3px);
+}
+@keyframes raise9 {
+  to {
+    bottom: 150vh;
+    transform: scale(2.1) rotate(180deg);
+  }
+}
+.svg:nth-child(10) {
+  left: 5%;
+  animation: raise10 7s linear infinite;
+  animation-delay: -4s;
+  transform: scale(2.4) rotate(7deg);
+  z-index: 3;
+  filter: blur(4px);
+}
+@keyframes raise10 {
+  to {
+    bottom: 150vh;
+    transform: scale(2.4) rotate(51deg);
+  }
 }
 

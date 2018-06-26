@@ -3,8 +3,18 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  /* overflow: auto; */
+
+}
+
 body {
-    margin: 0px auto;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
     background: linear-gradient(152deg, #48bbdd, #6da2ec, #926dec);
     background-size: 1000% 1000%;
 
@@ -17,7 +27,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 25px;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     -webkit-animation: backgrnd_animation 35s ease infinite;
     -moz-animation: backgrnd_animation 35s ease infinite;
@@ -38,6 +48,10 @@ body {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+nav {
+  opacity: 0.5;
 }
 
 #input-form {
@@ -93,18 +107,11 @@ button {
   perspective-origin: 50% 50%;
 } */
 .container {
-  /* margin: 3%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-  border-radius: 3px;
-  text-align: center;
-  font-size: 1.4vw; */
 
   margin: 0 auto;
   padding-top: 5%;
 }
+
 .container h3 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
@@ -122,8 +129,9 @@ button {
 
 .wrap {
   position: relative;
-  /* width: 100%; */
-  height: 100vmin;
+  width: 100%;
+  height: 100%;
+  /* height: 1000%; */
   margin: 0 auto;
   overflow: hidden;
   margin-left: auto;
