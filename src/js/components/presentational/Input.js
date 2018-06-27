@@ -1,5 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+
+/*
+  A presentational component for displaying the text input markup and receiving data from the container component as props.
+*/
 const Input = ({ label, text, type, id, value, min, max, handleChange, placeholder}) => (
   <div className="form-group">
     <label htmlFor={label}>{text}</label>
@@ -14,11 +18,10 @@ const Input = ({ label, text, type, id, value, min, max, handleChange, placehold
       placeholder = {placeholder}
       required
     />
-
   </div>
 );
 
-// Used to check the data you recieve is valid during development mode
+// Check the data you recieve is valid during development mode
 Input.propTypes = {
   label: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,

@@ -7,8 +7,6 @@ html {
   height: 100%;
   margin: 0 auto;
   width: 100%;
-  /* overflow: auto; */
-
 }
 
 body {
@@ -18,22 +16,21 @@ body {
     background: linear-gradient(152deg, #48bbdd, #6da2ec, #926dec);
     background-size: 1000% 1000%;
 
-    /* font-family: 'Playfair Display', serif; */
     font-family: serif;
     color: rgb(82, 80, 66);
-    /* color: rgb(255,0,0, 1); */
+
     text-rendering: optimizeLegibility;
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 25px;
-    /* overflow: hidden; */
 
     -webkit-animation: backgrnd_animation 35s ease infinite;
     -moz-animation: backgrnd_animation 35s ease infinite;
     animation: backgrnd_animation 35s ease infinite;
 }
 
+/* background color animation */
 @-webkit-keyframes backgrnd_animation {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -100,14 +97,7 @@ button {
   margin-bottom: 5%;
 }
 
-
-
-/* Backgound animation */
-/* .wrap {
-  perspective-origin: 50% 50%;
-} */
 .container {
-
   margin: 0 auto;
   padding-top: 5%;
 }
@@ -122,23 +112,33 @@ button {
   text-align: center;
 }
 
+.container h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-weight: 900;
+  font-style: italic;
+  color: #efedf9;
+  text-align: center;
+}
+
 .container h5 {
   font-weight: bold;
   padding-top: 5%;
 }
 
+/* Backgound svg animation */
 .wrap {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 150%;
   /* height: 1000%; */
   margin: 0 auto;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
 }
+
 .svg {
-  /* stroke: #7ceaa4; */
   stroke: #A3E4D7;
   position: absolute;
   bottom: -100vh;

@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input";
+
+/*
+  Main container component that carries all the logic:
+  functions for handling state changes and internal component state
+*/
+
 class FormContainer extends Component {
   constructor(props) {
     super();
@@ -17,17 +23,18 @@ class FormContainer extends Component {
     this.fibonacci = this.fibonacci.bind(this);
   }
 
+// handle form changes
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
 
+// Handle form submission
   handleSubmit(event) {
-    // alert("You entered this number: " + this.state.value);
     this.setState({ showResult: false, error: false});
     event.preventDefault();
   }
 
-
+// Set conditions to display generated fibonacci sequence
   getFib(event) {
     if (this.state.value === "" || this.state.value < 1 || this.state.value > 1476) {
       this.setState({ error: true});
@@ -49,12 +56,11 @@ class FormContainer extends Component {
       return val;
   }
 
+  // Render the input form component
   renderNormal() {
     const { seo_title } = this.state;
     return (
-
       <div id="input-form">
-
           <button id="collap-btn" className="btn btn-primary" data-toggle="collapse" href="#collapseCard" role="button" aria-expanded="false" aria-controls="collapseCard">
               What does the generator do?
           </button>
@@ -84,17 +90,15 @@ class FormContainer extends Component {
           </form>
 
           <button id="fib_btn" onClick = {this.getFib} className = "waves-effect btn-large"> Fibonacci it! </button>
-
-
-
       </div>
     );
   }
 
+  // Render the result component
   renderResult() {
     return (
         <div id="fib-result">
-          <h3 id="result"> Your result is {this.state.res}</h3>
+          <h2 id="result"> Your result is {this.state.res}</h2>
           <div id="result-card" className="card z-depth-1">
               <p>
                   Principle: The Fibonacci numbers F(n) are as follows:
@@ -109,6 +113,7 @@ class FormContainer extends Component {
       );
   }
 
+  // Render the error component
   renderError() {
     return (
       <div id="error">
@@ -120,6 +125,7 @@ class FormContainer extends Component {
       );
   }
 
+  // Render different components based on different conditions
   render() {
     if (this.state.error) {
       return this.renderError();
@@ -131,6 +137,7 @@ class FormContainer extends Component {
     }
   }
 }
+
 export default FormContainer;
 
 const wrapper = document.getElementById("create-article-form");
