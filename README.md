@@ -24,5 +24,7 @@ Clone or Download this project to your local machine
 
 Open your browser, the program will start on `http://localhost:8080/`
 
+See [demo](https://youtu.be/Vm6nnVn13-o)
+
 ## Todo
 After installation, if the app doesn't run, try setup webpack production build as well
